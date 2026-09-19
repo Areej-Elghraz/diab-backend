@@ -123,8 +123,10 @@ class ProductImageController extends ApiController
                 array_push($uploadedPaths, $newPath);
             }
 
-            $validated['image'] = $newPath ?? $productImage->image;
-            $validated['position']   = $newPosition ?? $productImage->position;
+            if ($newPath) {
+                $validated['image'] = $newPath;
+            }
+            $validated['position'] = $newPosition ?? $productImage->position;
             $productImage->update($validated);
 
             return [

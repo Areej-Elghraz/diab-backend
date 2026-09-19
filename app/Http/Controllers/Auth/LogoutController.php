@@ -16,7 +16,7 @@ class LogoutController extends ApiController
             /** @var \App\Models\User $user */
             $user = auth('sanctum')->user();
 
-            if (!empty($validated['all_devices'])) {
+            if (!empty($validated['all_devices']) and $validated['all_devices'] == 1) { ///
                 $user->tokens()->delete();
             } else {
                 $user->tokens()?->where('name', $user->currentAccessToken()?->name)->delete();

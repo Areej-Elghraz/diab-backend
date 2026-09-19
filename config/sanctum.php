@@ -48,8 +48,8 @@ return [
     */
 
     'expiration' => null,
-    'access_token_expiration' => (int) env('ACCESS_TOKEN_EXPIRATION', 2),
-    'remember_token_expiration' => (int) env('REMEMBER_TOKEN_EXPIRATION', 30),
+    'access_token_expiration' => (int) env('ACCESS_TOKEN_EXPIRATION', 7200),
+    'remember_token_expiration' => (int) env('REMEMBER_TOKEN_EXPIRATION', 2592000),
 
     /*
     |--------------------------------------------------------------------------

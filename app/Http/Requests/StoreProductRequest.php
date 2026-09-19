@@ -26,6 +26,7 @@ class StoreProductRequest extends FormRequest
         return [
             'name'        => 'required|string|max:100',
             'description' => 'sometimes|nullable|string',
+            'price'       => 'required|numeric|min:0',
             'category_id' => 'required|integer|exists:categories,id',
             'images'      => 'required|array|min:2',
             'images.*'    => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

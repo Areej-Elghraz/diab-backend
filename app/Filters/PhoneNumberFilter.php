@@ -15,6 +15,9 @@ class PhoneNumberFilter
       $type = $this->includeStrToArray($request->type);
       $query->whereJsonContains('type', $type);
     }
+    if ($request->has('primary')) {
+      $query->where('primary', filter_var($request->primary, FILTER_VALIDATE_BOOLEAN));
+    }
     return $query;
   }
 }

@@ -31,7 +31,7 @@ class ResetPasswordController extends ApiController
             }
 
             if (!$otpRecord || empty($otpRecord->verified) || !$otpRecord->verified) {
-                throw new \Exception(__('messages.must_verify_otp_first'));
+                throw new \Exception(__('messages.must_verify_otp_first'), 403);
             }
 
             if (Hash::check($validated['new_password'], $user->password)) {
@@ -48,6 +48,8 @@ class ResetPasswordController extends ApiController
             DB::table('password_reset_tokens')
                 ->where('email', $user->email)
                 ->delete();
+
+            $user->tokens()?->where('name', $user->currentAccessToken()?->name)->delete();
 
             return [];
         },  __('messages.password_reset'));

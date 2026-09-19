@@ -3,6 +3,7 @@
 use Illuminate\Http\UploadedFile;
 
 beforeEach(function () {
+    $this->banner = \App\Models\Banner::factory()->create();
     $this->data = [
         'images' => [UploadedFile::fake()->image('banner1.jpg')],
         'image' => UploadedFile::fake()->image('banner2.png'),

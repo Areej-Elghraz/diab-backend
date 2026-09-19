@@ -16,10 +16,12 @@ class PhoneNumber extends Model
     protected $fillable = [
         'phone',
         'type',
+        'primary',
     ];
 
     protected $casts = [
         'type' => 'array',
+        'primary' => 'boolean',
     ];
 
     public $allTypes;
@@ -36,7 +38,7 @@ class PhoneNumber extends Model
         $type = array_map('strtolower', $type);
 
         if (array_diff($type, $this->allTypes)) {
-            throw new \Exception(__('validation.invalid_value', ['attribute' => __('validation.attributes.type')]));
+            throw new \Exception(__('validation.invalid_value', ['attribute' => __('validation.attributes.type')]), 400);
         }
 
         return $this->phonesByType($query, $type);

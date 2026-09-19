@@ -18,7 +18,9 @@ class RefreshTokenController extends ApiController
             $tokens = $generateTokensService($user, $request->header('User-Agent'));
             return [
                 'access_token' => $tokens['access_token'],
+                'access_token_expires_in' => $tokens['access_token_expires_in'],
                 'remember_token' => $tokens['remember_token'],
+                'remember_token_expires_in' => $tokens['remember_token_expires_in'],
             ];
         }, __('messages.token_generated'));
     }

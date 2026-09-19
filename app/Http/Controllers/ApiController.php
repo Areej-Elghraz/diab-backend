@@ -73,13 +73,13 @@ abstract class ApiController
             }
 
             $code = $e->getCode();
-            if ($code && is_numeric($code) && count_chars((string) $code) == 3 && in_array(count_chars((string) $code)[0], ['1', '2', '3', '4', '5'])) {
+            if ($code && is_numeric($code) && strlen((string) $code) == 3) {
                 $statusCode =  $code;
             }
 
             return $this->errorResponse(
-                message: __('messages.actions.error'),
-                // message: $e->getMessage(), ///
+                // message: __('messages.actions.error'),
+                message: $e->getMessage(), ///
                 status: $statusCode ?? 400,
             );
         }

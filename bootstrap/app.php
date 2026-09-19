@@ -97,11 +97,13 @@ return Application::configure(basePath: dirname(__DIR__))
             }
         });
 
-        // $exceptions->render(function (\Throwable $e, $request) {
+        // // Model not found
+        // $exceptions->render(function (\Illuminate\Database\Eloquent\ModelNotFoundException $e, $request) {
         //     if ($request->expectsJson()) {
         //         return response()->json([
-        //             'message' => __('messages.internal_server_error'),
-        //         ], 500);
+        //             'status' => 'error',
+        //             'message' => 'Resource not found.',
+        //         ], 404);
         //     }
         // });
 
@@ -151,6 +153,14 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json([
                     'message' => __('auth.invalid_scope'),
                 ], 403);
+            }
+        });
+
+        $exceptions->render(function (\Throwable $e, $request) {
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => __('messages.internal_server_error'),
+                ], 500);
             }
         });
     })->create();

@@ -5,10 +5,14 @@ use App\Models\Product;
 use Illuminate\Http\UploadedFile;
 
 beforeEach(function () {
+    $this->category = Category::factory()->create();
+    $this->product = Product::factory()->create(['category_id' => $this->category->id]);
+    
     $this->data = [
         'name' => fake()->unique()->name(),
         'description' => 'ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة',
-        'category_id' => Category::inRandomOrder()->first()->id,
+        'price' => 150.50,
+        'category_id' => $this->category->id,
         'images' => [
             UploadedFile::fake()->image('product1.jpg'),
             UploadedFile::fake()->image('product2.jpg'),
@@ -31,7 +35,7 @@ test('user can view all paginated products list', function () {
             'data' => [
                 'products' => [
                     'data' => [
-                        '*' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                        '*' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
                     ]
                 ]
             ]
@@ -51,7 +55,9 @@ test('admin can view trashed products', function () {
             'message',
             'data' => [
                 'products' => [
-                    '*' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                    'data' => [
+                        '*' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
+                    ]
                 ]
             ]
         ]);
@@ -66,7 +72,7 @@ test('admin can create a product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 });
@@ -82,7 +88,7 @@ test('admin can view single product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 });
@@ -99,7 +105,7 @@ test('admin can view single trashed product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 });
@@ -113,7 +119,7 @@ test('admin can update product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 });
@@ -129,7 +135,7 @@ test('admin can soft delete a product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 
@@ -150,7 +156,7 @@ test('admin can restore a trashed product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 
@@ -172,7 +178,7 @@ test('admin can permanently delete a product', function () {
         ->assertJsonStructure([
             'message',
             'data' => [
-                'product' => ['id', 'name', 'description', 'created_at', 'updated_at']
+                'product' => ['id', 'name', 'description', 'price', 'created_at', 'updated_at']
             ]
         ]);
 

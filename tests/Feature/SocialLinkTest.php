@@ -3,6 +3,7 @@
 use App\Enums\SocialMediaEnum;
 
 beforeEach(function () {
+    $this->socialLink = \App\Models\SocialLink::factory()->create();
     $this->data = [
         'url' => fake()->url(),
         'social_media' => fake()->randomElement(SocialMediaEnum::values())

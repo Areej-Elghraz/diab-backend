@@ -23,12 +23,12 @@ class CategoryController extends ApiController
             if ($request->include ?? null) {
                 $includes = $this->includeStrToArray($request->include);
             }
-            $perPage  = $request->per_page ?? 12;
+            $perPage  = $request->per_page ?? null;
             $categoriesQuery = Category::with($includes ?? [])
                 ->withCount('products')
                 ->orderByDesc('products_count');
 
-            if ($user ?? null && $user->isAdmin()) {
+            if ($perPage != null && $perPage > 0) {
                 $categories = $categoriesQuery->paginate($perPage);
             } else {
                 $categories = $categoriesQuery->get();

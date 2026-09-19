@@ -166,11 +166,11 @@ return [
     'uuid'        => 'حقل :attribute يجب أن يكون UUID صالح.',
 
     // Custom validation messages.
-    'invalid_value'             => 'قيمة :attribute غير صحيحة!',
-    'expired_otp'                => 'انتهت صلاحية رمز التحقق!',
-    'only_one_position'          => 'مسموح بصورة واحدة فقط في موضع ":attribute".',
-    'cannot_update_position'     => 'لا يمكنك تحديث موضع صورة ":attribute".',
-    'new_password_must_differ'   => 'يجب أن تكون كلمة المرور الجديدة مختلفة عن الحالية!',
+    'invalid_value'            => 'قيمة :attribute غير صحيحة!',
+    'expired_otp'              => 'انتهت صلاحية رمز التحقق!',
+    'only_one_position'        => 'مسموح بصورة واحدة فقط في موضع ":attribute".',
+    'cannot_update_position'   => 'لا يمكنك تحديث موضع صورة ":attribute".',
+    'new_password_must_differ' => 'يجب أن تكون كلمة المرور الجديدة مختلفة عن الحالية!',
 
     /*
     |--------------------------------------------------------------------------
@@ -202,10 +202,12 @@ return [
 
     'attributes' => [
         'name' => 'الاسم',
+        'input' => 'اسم المستخدم أو البريد الالكتروني',
         'username' => 'اسم المستخدم',
         'email' => 'البريد الإلكتروني',
         'password' => 'كلمة المرور',
 
+        'code' => 'رمز التحقق',
         'otp' => 'رمز التحقق (OTP)',
         'current_password' => 'كلمة المرور الحالية',
         'new_password' => 'كلمة المرور الجديدة',
@@ -232,5 +234,4 @@ return [
         'all_devices' => 'الخروج من كل الاجهوة',
         'include' => 'العلاقات',
     ],
-
 ];

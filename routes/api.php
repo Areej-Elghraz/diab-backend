@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/login', LoginController::class)->name('auth.login');
+Route::post('/refresh-token', RefreshTokenController::class)->name('auth.refresh-token')
+    ->middleware(['auth:sanctum', 'verified', 'authorized', 'ability:' . TokenAbilityEnum::remember_token->value]); // 'throttle:5,1'
 Route::post('/forget-password', ForgetPasswordController::class)->name('auth.forget-password');
 Route::post('/resend-otp', ResendOtpController::class)->name('auth.resend-otp');
 Route::post('/verify-otp', VerifyOtpController::class)->name('auth.verify-otp');
@@ -87,5 +89,3 @@ foreach ($resources as $uri => $controller) {
 Route::fallback(function () {
     return response()->json(['message', __('messages.404_not_found')], 404);
 });
-
-Route::post('/refresh-token', RefreshTokenController::class)->name('auth.refresh-token')->middleware(['auth:sanctum', 'verified', 'authorized', 'ability:' . TokenAbilityEnum::remember_token->value]);

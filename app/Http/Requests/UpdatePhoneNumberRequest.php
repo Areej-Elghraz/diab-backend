@@ -24,6 +24,7 @@ class UpdatePhoneNumberRequest extends FormRequest
             'phone'  => 'sometimes|nullable|unique:phone_numbers,phone|phone:AUTO',
             'type'   => 'sometimes|nullable|array|min:1',
             'type.*' => ['required', new Enum(PhoneNumberTypeEnum::class)],
+            'primary' => 'sometimes|boolean',
         ];
     }
 

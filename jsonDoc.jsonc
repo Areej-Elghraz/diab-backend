@@ -1,0 +1,2231 @@
+[
+    // Errors
+    // validation error -> status code = 422
+    {
+        "message": "حقل اسم المستخدم أو البريد الالكتروني مطلوب.",
+        "errors": {
+            "input": [
+                "حقل اسم المستخدم أو البريد الالكتروني مطلوب."
+            ],
+            "new_password": [
+                "حقل كلمة المرور الجديدة مطلوب."
+            ]
+        }
+    },
+    // any other errors like: with difference in status code
+    {
+        "message": "طريقة الطلب غير مسموح بها."
+    },
+    // Authentication
+    // login
+    {
+        "message": "تم تسجيل الدخول بنجاح!",
+        "data": {
+            "user": {
+                "id": 1,
+                "name": "Admin",
+                "username": "ayadiab123",
+                "email": "diabfurnitures@gmail.com",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-24 13:18:51"
+            },
+            "access_token": "13|YxYsfXwO60kr6eM8yEWHmUwHBooocu2Yvtg2hhIF0dc79f7c",
+            "remember_token": "14|MD8S4jEdAga26GngsYTeAxLvLlC4njkGotX0jA8Oa693b793"
+        }
+    },
+    // logout
+    {
+        "message": "تم تسجيل الخروج بنجاح!",
+        "data": []
+    },
+    // forget password
+    {
+        "message": "تم إرسال رمز التحقق (OTP) إلى بريدك الإلكتروني.",
+        "data": []
+    },
+    // refresh token
+    {
+        "message": "تم إنشاء رمز الدخول بنجاح!",
+        "data": {
+            "access_token": "15|D73GP9oSVcQwitlS794zvLARD3JHanOhTncUt5E5209c54f4",
+            "remember_token": "16|pidKneJhXW91F90yX3RB0JMrkvbsweXupRZhzeyFbd470a0a"
+        }
+    },
+    // reset password
+    {
+        "message": "تم إعادة تعيين كلمة المرور بنجاح!",
+        "data": []
+    },
+    // resend otp
+    {
+        "message": "تم إرسال رمز التحقق (OTP) إلى بريدك الإلكتروني.",
+        "data": []
+    },
+    // verify otp
+    {
+        "message": "تم التحقق من الرمز بنجاح!",
+        "data": []
+    },
+    // Profile
+    // show
+    {
+        "message": "تم جلب بيانات الملف الشخصي بنجاح!",
+        "data": {
+            "user": {
+                "id": 1,
+                "name": "Admin",
+                "username": "ayadiab123",
+                "email": "diabfurnitures@gmail.com",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:19:10"
+            }
+        }
+    },
+    // update data
+    {
+        "message": "تم تحديث بيانات الملف الشخصي بنجاح!",
+        "data": {
+            "user": {
+                "id": 1,
+                "name": "Reeja 😭.",
+                "username": "ayadiab123",
+                "email": "diabfurnitures@gmail.com",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:22:01"
+            }
+        }
+    },
+    // update password
+    {
+        "message": "تم إعادة تعيين كلمة المرور بنجاح!",
+        "data": {
+            "user": {
+                "id": 1,
+                "name": "Reeja 😭.",
+                "username": "ayadiab123",
+                "email": "diabfurnitures@gmail.com",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:23:45"
+            }
+        }
+    },
+    // product
+    // index
+    {
+        "message": "تم جلب المنتجات بنجاح!",
+        "data": {
+            "products": {
+                "current_page": 2,
+                "data": [
+                    {
+                        "id": 13,
+                        "name": "أ.د معالي حارث",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 37,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008899?text=et",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 38,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc11?text=exercitationem",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 39,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbaa?text=in",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 2,
+                            "name": "الدكتورة سماح كاظم",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 3
+                        },
+                        "after_image": {
+                            "id": 38,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc11?text=exercitationem",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 37,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008899?text=et",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 39,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbaa?text=in",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 14,
+                        "name": "السيدة سعاد الداوود",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 40,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ffaa?text=deleniti",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 41,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ffcc?text=laborum",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 42,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/005588?text=minus",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 3,
+                            "name": "المهندسة سهير هوساوي",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 2
+                        },
+                        "after_image": {
+                            "id": 40,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ffaa?text=deleniti",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 42,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/005588?text=minus",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "name": "م. راجي عبد الفتاح",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 43,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/005577?text=consequatur",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 44,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/002277?text=voluptas",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 45,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0088ee?text=dolor",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 10,
+                            "name": "نعمة عزام",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 4
+                        },
+                        "after_image": {
+                            "id": 45,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0088ee?text=dolor",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": {
+                            "id": 43,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/005577?text=consequatur",
+                            "position": "before",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "gallery": []
+                    },
+                    {
+                        "id": 16,
+                        "name": "خليل نجيب",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 46,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0055ee?text=voluptas",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 47,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007722?text=soluta",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 48,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbbb?text=aut",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 5,
+                            "name": "الآنسة علياء عبد اللطيف",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 4
+                        },
+                        "after_image": null,
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 46,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0055ee?text=voluptas",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 47,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007722?text=soluta",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 48,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbbb?text=aut",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 17,
+                        "name": "الدكتورة سجى زين العابدين",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 49,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa66?text=corrupti",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 50,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=velit",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 51,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa55?text=sit",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 6,
+                            "name": "م. رهف جمال الدين",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 1
+                        },
+                        "after_image": {
+                            "id": 51,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa55?text=sit",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": {
+                            "id": 50,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=velit",
+                            "position": "before",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "gallery": [
+                            {
+                                "id": 49,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa66?text=corrupti",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 18,
+                        "name": "المهندسة شيرين عبد المهيمن",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 52,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007722?text=autem",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 53,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007799?text=nemo",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 54,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ee55?text=minima",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 4,
+                            "name": "نعمه عبد الباسط",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 7
+                        },
+                        "after_image": {
+                            "id": 53,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007799?text=nemo",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": {
+                            "id": 54,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ee55?text=minima",
+                            "position": "before",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "gallery": [
+                            {
+                                "id": 52,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/007722?text=autem",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 19,
+                        "name": "الآنسة ليدا عبد الباسط",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 55,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0066bb?text=est",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 56,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0022aa?text=voluptate",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 57,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/006644?text=sed",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 2,
+                            "name": "الدكتورة سماح كاظم",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 3
+                        },
+                        "after_image": {
+                            "id": 55,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0066bb?text=est",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": []
+                    },
+                    {
+                        "id": 20,
+                        "name": "أ. زين غانم",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 58,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/009966?text=voluptas",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 59,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0066ff?text=officiis",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 60,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/009933?text=dolorum",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 9,
+                            "name": "أ. هشام عبد الكريم",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 3
+                        },
+                        "after_image": {
+                            "id": 59,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0066ff?text=officiis",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 58,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/009966?text=voluptas",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 21,
+                        "name": "أ.د مصطفى شافع",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 61,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004411?text=eius",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 62,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0000ee?text=delectus",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 63,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc22?text=aliquam",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 8,
+                            "name": "اياس الكفراوي",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 3
+                        },
+                        "after_image": {
+                            "id": 61,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004411?text=eius",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 63,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc22?text=aliquam",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 22,
+                        "name": "نعمان مظهر",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 64,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=consequuntur",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 65,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc22?text=sunt",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 66,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003399?text=doloremque",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ],
+                        "category": {
+                            "id": 4,
+                            "name": "نعمه عبد الباسط",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 7
+                        },
+                        "after_image": {
+                            "id": 66,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003399?text=doloremque",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        "before_image": null,
+                        "gallery": [
+                            {
+                                "id": 64,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=consequuntur",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 65,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc22?text=sunt",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 23,
+                        "name": "أ.د فهد عبد الهادي",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:53",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 67,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008855?text=ut",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            },
+                            {
+                                "id": 68,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0000aa?text=molestiae",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            },
+                            {
+                                "id": 69,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bb44?text=ut",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        ],
+                        "category": {
+                            "id": 2,
+                            "name": "الدكتورة سماح كاظم",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 3
+                        },
+                        "after_image": null,
+                        "before_image": {
+                            "id": 67,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008855?text=ut",
+                            "position": "before",
+                            "created_at": "2025-10-24 13:18:53",
+                            "updated_at": "2025-10-24 13:18:53"
+                        },
+                        "gallery": [
+                            {
+                                "id": 69,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bb44?text=ut",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 24,
+                        "name": "زاهر رجائي",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:53",
+                        "images_count": 3,
+                        "images": [
+                            {
+                                "id": 70,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004466?text=provident",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            },
+                            {
+                                "id": 71,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0077cc?text=excepturi",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            },
+                            {
+                                "id": 72,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/002244?text=deleniti",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        ],
+                        "category": {
+                            "id": 4,
+                            "name": "نعمه عبد الباسط",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "products_count": 7
+                        },
+                        "after_image": {
+                            "id": 71,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0077cc?text=excepturi",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:53",
+                            "updated_at": "2025-10-24 13:18:53"
+                        },
+                        "before_image": {
+                            "id": 72,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/002244?text=deleniti",
+                            "position": "before",
+                            "created_at": "2025-10-24 13:18:53",
+                            "updated_at": "2025-10-24 13:18:53"
+                        },
+                        "gallery": [
+                            {
+                                "id": 70,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004466?text=provident",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        ]
+                    }
+                ],
+                "first_page_url": "http://127.0.0.1:8000/api/products?page=1",
+                "from": 13,
+                "last_page": 3,
+                "last_page_url": "http://127.0.0.1:8000/api/products?page=3",
+                "links": [
+                    {
+                        "url": "http://127.0.0.1:8000/api/products?page=1",
+                        "label": "&laquo; السابق",
+                        "active": false
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/products?page=1",
+                        "label": "1",
+                        "active": false
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/products?page=2",
+                        "label": "2",
+                        "active": true
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/products?page=3",
+                        "label": "3",
+                        "active": false
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/products?page=3",
+                        "label": "التالي &raquo;",
+                        "active": false
+                    }
+                ],
+                "next_page_url": "http://127.0.0.1:8000/api/products?page=3",
+                "path": "http://127.0.0.1:8000/api/products",
+                "per_page": 12,
+                "prev_page_url": "http://127.0.0.1:8000/api/products?page=1",
+                "to": 24,
+                "total": 30
+            }
+        }
+    },
+    // show
+    {
+        "message": "تم جلب المنتج بنجاح!",
+        "data": {
+            "product": {
+                "id": 1,
+                "name": "شذى عبد العزيز",
+                "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-24 13:18:51",
+                "images_count": 3
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء المنتج بنجاح!",
+        "data": {
+            "product": {
+                "name": "ركنة 12",
+                "description": "4 فتيه 1 كنبة 1 ترابيزة",
+                "updated_at": "2025-10-25 16:31:15",
+                "created_at": "2025-10-25 16:31:15",
+                "id": 31,
+                "images_count": 4,
+                "images": [
+                    {
+                        "id": 91,
+                        "image": "http://127.0.0.1:8000/storage/product_images/jYDRvsHG7ByI2U0NQ7sscMhxHbHAZLRUAOJrTIbL.jpg",
+                        "position": "after",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    },
+                    {
+                        "id": 92,
+                        "image": "http://127.0.0.1:8000/storage/product_images/N9SZLJ2DyD9lRisGGEX524UDuKWERZ2IxYVHzhoV.jpg",
+                        "position": "gallery",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    },
+                    {
+                        "id": 93,
+                        "image": "http://127.0.0.1:8000/storage/product_images/K2Z5EY6QKDW4LR4uTcKVcRKVUwLlz6U5UFTvkNPU.jpg",
+                        "position": "before",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    },
+                    {
+                        "id": 94,
+                        "image": "http://127.0.0.1:8000/storage/product_images/zpHtmCppV2CAAjg2Lq0Y7GikCYppU9Db4hLbg68p.jpg",
+                        "position": "gallery",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    }
+                ],
+                "category": {
+                    "id": 3,
+                    "name": "المهندسة سهير هوساوي",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 3
+                },
+                "after_image": {
+                    "id": 91,
+                    "image": "http://127.0.0.1:8000/storage/product_images/jYDRvsHG7ByI2U0NQ7sscMhxHbHAZLRUAOJrTIbL.jpg",
+                    "position": "after",
+                    "created_at": "2025-10-25 16:31:15",
+                    "updated_at": "2025-10-25 16:31:15"
+                },
+                "before_image": {
+                    "id": 93,
+                    "image": "http://127.0.0.1:8000/storage/product_images/K2Z5EY6QKDW4LR4uTcKVcRKVUwLlz6U5UFTvkNPU.jpg",
+                    "position": "before",
+                    "created_at": "2025-10-25 16:31:15",
+                    "updated_at": "2025-10-25 16:31:15"
+                },
+                "gallery": [
+                    {
+                        "id": 92,
+                        "image": "http://127.0.0.1:8000/storage/product_images/N9SZLJ2DyD9lRisGGEX524UDuKWERZ2IxYVHzhoV.jpg",
+                        "position": "gallery",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    },
+                    {
+                        "id": 94,
+                        "image": "http://127.0.0.1:8000/storage/product_images/zpHtmCppV2CAAjg2Lq0Y7GikCYppU9Db4hLbg68p.jpg",
+                        "position": "gallery",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15"
+                    }
+                ]
+            }
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث المنتج بنجاح!",
+        "data": {
+            "product": {
+                "id": 13,
+                "name": "updated product",
+                "description": "this is updated product.",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:34:14",
+                "images_count": 3,
+                "images": [
+                    {
+                        "id": 37,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008899?text=et",
+                        "position": "gallery",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    },
+                    {
+                        "id": 38,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc11?text=exercitationem",
+                        "position": "after",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    },
+                    {
+                        "id": 39,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbaa?text=in",
+                        "position": "gallery",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    }
+                ],
+                "category": {
+                    "id": 5,
+                    "name": "الآنسة علياء عبد اللطيف",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 5
+                }
+            }
+        }
+    },
+    // destroy
+    {
+        "message": "تم حذف المنتج بنجاح!",
+        "data": {
+            "product": {
+                "id": 14,
+                "name": "السيدة سعاد الداوود",
+                "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:36:06",
+                "images_count": 3
+            }
+        }
+    },
+    // index trashed
+    {
+        "message": "تم جلب المنتجات بنجاح!",
+        "data": {
+            "products": {
+                "current_page": 1,
+                "data": [
+                    {
+                        "id": 14,
+                        "name": "السيدة سعاد الداوود",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-25 16:36:06",
+                        "images_count": 3
+                    },
+                    {
+                        "id": 13,
+                        "name": "updated product",
+                        "description": "this is updated product.",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-25 16:36:00",
+                        "images_count": 3
+                    }
+                ],
+                "first_page_url": "http://127.0.0.1:8000/api/products/trashed?page=1",
+                "from": 1,
+                "last_page": 1,
+                "last_page_url": "http://127.0.0.1:8000/api/products/trashed?page=1",
+                "links": [
+                    {
+                        "url": null,
+                        "label": "&laquo; السابق",
+                        "active": false
+                    },
+                    {
+                        "url": "http://127.0.0.1:8000/api/products/trashed?page=1",
+                        "label": "1",
+                        "active": true
+                    },
+                    {
+                        "url": null,
+                        "label": "التالي &raquo;",
+                        "active": false
+                    }
+                ],
+                "next_page_url": null,
+                "path": "http://127.0.0.1:8000/api/products/trashed",
+                "per_page": 12,
+                "prev_page_url": null,
+                "to": 2,
+                "total": 2
+            }
+        }
+    },
+    // show trashed
+    {
+        "message": "تم جلب المنتج بنجاح!",
+        "data": {
+            "product": {
+                "id": 14,
+                "name": "السيدة سعاد الداوود",
+                "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:36:06",
+                "images_count": 3
+            }
+        }
+    },
+    // force delee
+    {
+        "message": "تم حذف المنتج نهائيًا!",
+        "data": {
+            "product": {
+                "id": 13,
+                "name": "updated product",
+                "description": "this is updated product.",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 16:36:00",
+                "images_count": 0,
+                "images": [
+                    {
+                        "id": 37,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008899?text=et",
+                        "position": "gallery",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    },
+                    {
+                        "id": 38,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc11?text=exercitationem",
+                        "position": "after",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    },
+                    {
+                        "id": 39,
+                        "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bbaa?text=in",
+                        "position": "gallery",
+                        "created_at": "2025-10-24 13:18:52",
+                        "updated_at": "2025-10-24 13:18:52"
+                    }
+                ]
+            }
+        }
+    },
+    // banner
+    // index
+    {
+        "message": "تم جلب اللافتات بنجاح!",
+        "data": {
+            "banners": [
+                {
+                    "id": 1,
+                    "image": "http://127.0.0.1:8000/storage/http://www.ramzy.net/et-tempore-modi-accusantium-expedita-voluptas-sapiente-quod",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 2,
+                    "image": "http://127.0.0.1:8000/storage/http://mahmoud.come.eg/dolorem-et-et-quas-ut-totam-ducimus.html",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 3,
+                    "image": "http://127.0.0.1:8000/storage/http://www.mostafa.come.eg",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 4,
+                    "image": "http://127.0.0.1:8000/storage/http://www.mostafa.come.eg/sit-modi-neque-sunt-assumenda-ipsam",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 5,
+                    "image": "http://127.0.0.1:8000/storage/http://www.carmen.net/iure-alias-autem-esse-est",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 6,
+                    "image": "http://127.0.0.1:8000/storage/http://younes.com/rerum-architecto-dolores-ducimus-ratione",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 7,
+                    "image": "http://127.0.0.1:8000/storage/http://www.mostafa.eg/exercitationem-sapiente-dolor-nihil-voluptate-et.html",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                }
+            ]
+        }
+    },
+    // show
+    {
+        "message": "messages.action.actions.retrieved_success",
+        "data": {
+            "banner": {
+                "id": 5,
+                "image": "http://127.0.0.1:8000/storage/http://www.carmen.net/iure-alias-autem-esse-est",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-24 13:18:51"
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء اللافتة بنجاح!",
+        "data": {
+            "banners": [
+                {
+                    "image": "http://127.0.0.1:8000/storage/banner_images/4ryTGWUfAxMQaXantUGXJR7aWZKEMHl1AdAXsvWa.jpg",
+                    "updated_at": "2025-10-25 16:57:04",
+                    "created_at": "2025-10-25 16:57:04",
+                    "id": 8
+                }
+            ]
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث اللافتة بنجاح!",
+        "data": {
+            "banner": {
+                "id": 8,
+                "image": "http://127.0.0.1:8000/storage/banner_images/4ryTGWUfAxMQaXantUGXJR7aWZKEMHl1AdAXsvWa.jpg",
+                "created_at": "2025-10-25 16:57:04",
+                "updated_at": "2025-10-25 16:57:04"
+            }
+        }
+    },
+    // destroy
+    {
+        "message": "تم حذف اللافتة بنجاح!",
+        "data": {
+            "banner": {
+                "id": 8,
+                "image": "http://127.0.0.1:8000/storage/banner_images/4ryTGWUfAxMQaXantUGXJR7aWZKEMHl1AdAXsvWa.jpg",
+                "created_at": "2025-10-25 16:57:04",
+                "updated_at": "2025-10-25 16:57:04"
+            }
+        }
+    },
+    // categories
+    // index
+    {
+        "message": "تم جلب التصنيفات بنجاح!",
+        "data": {
+            "categories": [
+                {
+                    "id": 4,
+                    "name": "نعمه عبد الباسط",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 7,
+                    "products": [
+                        {
+                            "id": 1,
+                            "name": "شذى عبد العزيز",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 10,
+                            "name": "أ. وسام مظهر",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 30,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/001177?text=molestiae",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        },
+                        {
+                            "id": 12,
+                            "name": "لمى مهران",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 18,
+                            "name": "المهندسة شيرين عبد المهيمن",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 54,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ee55?text=minima",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        },
+                        {
+                            "id": 22,
+                            "name": "نعمان مظهر",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 24,
+                            "name": "زاهر رجائي",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 72,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/002244?text=deleniti",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        },
+                        {
+                            "id": 29,
+                            "name": "الأستاذ ياسر الكفراوي",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 85,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0022bb?text=minima",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "نعمة عزام",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 4,
+                    "products": [
+                        {
+                            "id": 3,
+                            "name": "السيدة شذى السقا",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 7,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/000077?text=porro",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:51",
+                                "updated_at": "2025-10-24 13:18:51"
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "name": "أ. لينة فواز",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 13,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aabb?text=ea",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:51",
+                                "updated_at": "2025-10-24 13:18:51"
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "name": "حمزة عبد الفتاح",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 15,
+                            "name": "م. راجي عبد الفتاح",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 43,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/005577?text=consequatur",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "الآنسة علياء عبد اللطيف",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 4,
+                    "products": [
+                        {
+                            "id": 4,
+                            "name": "الدكتورة فريدة فواز",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 10,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00ee00?text=molestias",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:51",
+                                "updated_at": "2025-10-24 13:18:51"
+                            }
+                        },
+                        {
+                            "id": 8,
+                            "name": "المهندسة أصاله عزيز",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 16,
+                            "name": "خليل نجيب",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 27,
+                            "name": "أ.د بهاء عبد الوهاب",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": null
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "أ. هشام عبد الكريم",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 3,
+                    "products": [
+                        {
+                            "id": 20,
+                            "name": "أ. زين غانم",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 26,
+                            "name": "المهندس ادريس عزام",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 76,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00eeee?text=quo",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        },
+                        {
+                            "id": 28,
+                            "name": "سهى عزام",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 83,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0088bb?text=totam",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "اياس الكفراوي",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 3,
+                    "products": [
+                        {
+                            "id": 9,
+                            "name": "م. زاهي هارون",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 21,
+                            "name": "أ.د مصطفى شافع",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 30,
+                            "name": "الدكتور اكرم شافع",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 90,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/000033?text=ab",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "الدكتورة سماح كاظم",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 2,
+                    "products": [
+                        {
+                            "id": 19,
+                            "name": "الآنسة ليدا عبد الباسط",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": null
+                        },
+                        {
+                            "id": 23,
+                            "name": "أ.د فهد عبد الهادي",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 67,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008855?text=ut",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:53",
+                                "updated_at": "2025-10-24 13:18:53"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "المهندسة سهير هوساوي",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 2,
+                    "products": [
+                        {
+                            "id": 11,
+                            "name": "بليغ هارون",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 31,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008888?text=eius",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        },
+                        {
+                            "id": 31,
+                            "name": "ركنة 12",
+                            "description": "4 فتيه 1 كنبة 1 ترابيزة",
+                            "created_at": "2025-10-25 16:31:15",
+                            "updated_at": "2025-10-25 16:31:15",
+                            "images_count": 4,
+                            "before_image": {
+                                "id": 93,
+                                "image": "http://127.0.0.1:8000/storage/product_images/K2Z5EY6QKDW4LR4uTcKVcRKVUwLlz6U5UFTvkNPU.jpg",
+                                "position": "before",
+                                "created_at": "2025-10-25 16:31:15",
+                                "updated_at": "2025-10-25 16:31:15"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "أ. اياس رسلان",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 2,
+                    "products": [
+                        {
+                            "id": 2,
+                            "name": "السيد راجي شافع",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:51",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 4,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0033ff?text=a",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:51",
+                                "updated_at": "2025-10-24 13:18:51"
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "name": "م. رجب عز العرب",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 21,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00bb77?text=impedit",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "م. رهف جمال الدين",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 1,
+                    "products": [
+                        {
+                            "id": 17,
+                            "name": "الدكتورة سجى زين العابدين",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:52",
+                            "images_count": 3,
+                            "before_image": {
+                                "id": 50,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=velit",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "د. فؤاد صدام",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51",
+                    "products_count": 1,
+                    "products": [
+                        {
+                            "id": 25,
+                            "name": "محمد  عبد الناصر",
+                            "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                            "created_at": "2025-10-24 13:18:51",
+                            "updated_at": "2025-10-24 13:18:53",
+                            "images_count": 3,
+                            "before_image": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    // show
+    {
+        "message": "تم جلب التصنيف بنجاح!",
+        "data": {
+            "category": {
+                "id": 1,
+                "name": "د. فؤاد صدام",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-24 13:18:51",
+                "products_count": 1,
+                "products": [
+                    {
+                        "id": 25,
+                        "name": "محمد  عبد الناصر",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:53",
+                        "images_count": 3,
+                        "before_image": null
+                    }
+                ]
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء التصنيف بنجاح!",
+        "data": {
+            "category": {
+                "name": "ركنة",
+                "updated_at": "2025-10-25 17:03:18",
+                "created_at": "2025-10-25 17:03:18",
+                "id": 11,
+                "products_count": 0
+            }
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث التصنيف بنجاح!",
+        "data": {
+            "category": {
+                "id": 1,
+                "name": "bed1",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-25 17:04:12",
+                "products_count": 1,
+                "products": [
+                    {
+                        "id": 25,
+                        "name": "محمد  عبد الناصر",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:53",
+                        "images_count": 3,
+                        "before_image": null
+                    }
+                ]
+            }
+        }
+    },
+    // delete
+    {
+        "message": "تم حذف التصنيف بنجاح!",
+        "data": {
+            "category": {
+                "id": 3,
+                "name": "المهندسة سهير هوساوي",
+                "created_at": "2025-10-24 13:18:51",
+                "updated_at": "2025-10-24 13:18:51",
+                "products_count": 0,
+                "products": [
+                    {
+                        "id": 11,
+                        "name": "بليغ هارون",
+                        "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:52",
+                        "images_count": 0,
+                        "images": [
+                            {
+                                "id": 31,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008888?text=eius",
+                                "position": "before",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 32,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/008888?text=facilis",
+                                "position": "after",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            },
+                            {
+                                "id": 33,
+                                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa44?text=ipsum",
+                                "position": "gallery",
+                                "created_at": "2025-10-24 13:18:52",
+                                "updated_at": "2025-10-24 13:18:52"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 31,
+                        "name": "ركنة 12",
+                        "description": "4 فتيه 1 كنبة 1 ترابيزة",
+                        "created_at": "2025-10-25 16:31:15",
+                        "updated_at": "2025-10-25 16:31:15",
+                        "images_count": 0,
+                        "images": [
+                            {
+                                "id": 91,
+                                "image": "http://127.0.0.1:8000/storage/product_images/jYDRvsHG7ByI2U0NQ7sscMhxHbHAZLRUAOJrTIbL.jpg",
+                                "position": "after",
+                                "created_at": "2025-10-25 16:31:15",
+                                "updated_at": "2025-10-25 16:31:15"
+                            },
+                            {
+                                "id": 92,
+                                "image": "http://127.0.0.1:8000/storage/product_images/N9SZLJ2DyD9lRisGGEX524UDuKWERZ2IxYVHzhoV.jpg",
+                                "position": "gallery",
+                                "created_at": "2025-10-25 16:31:15",
+                                "updated_at": "2025-10-25 16:31:15"
+                            },
+                            {
+                                "id": 93,
+                                "image": "http://127.0.0.1:8000/storage/product_images/K2Z5EY6QKDW4LR4uTcKVcRKVUwLlz6U5UFTvkNPU.jpg",
+                                "position": "before",
+                                "created_at": "2025-10-25 16:31:15",
+                                "updated_at": "2025-10-25 16:31:15"
+                            },
+                            {
+                                "id": 94,
+                                "image": "http://127.0.0.1:8000/storage/product_images/zpHtmCppV2CAAjg2Lq0Y7GikCYppU9Db4hLbg68p.jpg",
+                                "position": "gallery",
+                                "created_at": "2025-10-25 16:31:15",
+                                "updated_at": "2025-10-25 16:31:15"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    // social link
+    // index
+    {
+        "message": "تم جلب الروابط الاجتماعية بنجاح!",
+        "data": {
+            "social_links": [
+                {
+                    "id": 1,
+                    "url": "http://abdulaziz.org/",
+                    "social_media": "facebook",
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 2,
+                    "url": "http://youssef.biz/",
+                    "social_media": "messenger",
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 3,
+                    "url": "http://abdulaziz.net/eum-beatae-quo-sapiente-earum-sunt",
+                    "social_media": "tiktok",
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 4,
+                    "url": "http://www.rakeen.come.eg/magni-esse-et-molestiae-sint-modi-adipisci-et",
+                    "social_media": "messenger",
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 5,
+                    "url": "http://www.karim.net/aspernatur-debitis-dolores-corrupti-culpa-et.html",
+                    "social_media": "tiktok",
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 6,
+                    "url": "https://web.telegram.org/a/#-1001757252376_5716",
+                    "social_media": "messenger",
+                    "created_at": "2025-10-25 19:28:00",
+                    "updated_at": "2025-10-25 19:28:00"
+                }
+            ]
+        }
+    },
+    // show
+    {
+        "message": "تم جلب الرابط الاجتماعي بنجاح!",
+        "data": {
+            "social_link": {
+                "id": 5,
+                "url": "http://www.karim.net/aspernatur-debitis-dolores-corrupti-culpa-et.html",
+                "social_media": "tiktok",
+                "created_at": "2025-10-24 13:18:53",
+                "updated_at": "2025-10-24 13:18:53"
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء الرابط الاجتماعي بنجاح!",
+        "data": {
+            "social_link": {
+                "url": "https://web.telegram.org/a/#-1001757252376_5716",
+                "social_media": "messenger",
+                "updated_at": "2025-10-25 19:28:00",
+                "created_at": "2025-10-25 19:28:00",
+                "id": 6
+            }
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث الرابط الاجتماعي بنجاح!",
+        "data": {
+            "social_link": {
+                "id": 6,
+                "url": "https://facebook.com",
+                "social_media": "facebook",
+                "created_at": "2025-10-25 19:28:00",
+                "updated_at": "2025-10-25 19:29:50"
+            }
+        }
+    },
+    // destroy
+    {
+        "message": "تم حذف الرابط الاجتماعي بنجاح!",
+        "data": {
+            "social_link": {
+                "id": 6,
+                "url": "https://facebook.com",
+                "social_media": "facebook",
+                "created_at": "2025-10-25 19:28:00",
+                "updated_at": "2025-10-25 19:29:50"
+            }
+        }
+    },
+    // phone number
+    // index
+    {
+        "message": "تم جلب أرقام الهواتف بنجاح!",
+        "data": {
+            "phone_numbers": [
+                {
+                    "id": 5,
+                    "phone": "+1 (270) 219-9347",
+                    "type": [
+                        "phone",
+                        "whatsapp"
+                    ],
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 8,
+                    "phone": "+1-734-240-6335",
+                    "type": [
+                        "phone",
+                        "whatsapp"
+                    ],
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 9,
+                    "phone": "+1 (646) 923-8487",
+                    "type": [
+                        "phone",
+                        "whatsapp"
+                    ],
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 10,
+                    "phone": "820.565.3017",
+                    "type": [
+                        "phone",
+                        "whatsapp"
+                    ],
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                },
+                {
+                    "id": 13,
+                    "phone": "(747) 582-8823",
+                    "type": [
+                        "phone",
+                        "whatsapp"
+                    ],
+                    "created_at": "2025-10-24 13:18:53",
+                    "updated_at": "2025-10-24 13:18:53"
+                }
+            ]
+        }
+    },
+    // show
+    {
+        "message": "تم جلب رقم الهاتف بنجاح!",
+        "data": {
+            "phone_number": {
+                "id": 1,
+                "phone": "+1.212.549.3508",
+                "type": [
+                    "whatsapp"
+                ],
+                "created_at": "2025-10-24 13:18:53",
+                "updated_at": "2025-10-24 13:18:53"
+            }
+        }
+    },
+    // show by type
+    {
+        "message": "تم جلب رقم الهاتف بنجاح!",
+        "data": {
+            "phone_number": {
+                "id": 2,
+                "phone": "1-270-948-2822",
+                "type": [
+                    "phone"
+                ],
+                "created_at": "2025-10-24 13:18:53",
+                "updated_at": "2025-10-24 13:18:53"
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء رقم الهاتف بنجاح!",
+        "data": {
+            "phone_number": {
+                "phone": "+201034493000",
+                "type": [
+                    "phone",
+                    "whatsapp"
+                ],
+                "updated_at": "2025-10-25 19:31:58",
+                "created_at": "2025-10-25 19:31:58",
+                "id": 16
+            }
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث رقم الهاتف بنجاح!",
+        "data": {
+            "phone_number": {
+                "id": 3,
+                "phone": "+201081111122",
+                "type": [
+                    "phone",
+                    "whatsapp"
+                ],
+                "created_at": "2025-10-24 13:18:53",
+                "updated_at": "2025-10-25 19:32:25"
+            }
+        }
+    },
+    // destroy
+    {
+        "message": "تم حذف رقم الهاتف بنجاح!",
+        "data": {
+            "phone_number": {
+                "id": 10,
+                "phone": "820.565.3017",
+                "type": [
+                    "phone",
+                    "whatsapp"
+                ],
+                "created_at": "2025-10-24 13:18:53",
+                "updated_at": "2025-10-24 13:18:53"
+            }
+        }
+    },
+    // product image (for a specific product).
+    // index
+    {
+        "message": "تم جلب الصور بنجاح!",
+        "data": {
+            "images": [
+                {
+                    "id": 16,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aabb?text=eligendi",
+                    "position": "gallery",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 17,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/006688?text=aut",
+                    "position": "after",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 18,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004455?text=officia",
+                    "position": "gallery",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                }
+            ]
+        }
+    },
+    // show
+    {
+        "message": "تم جلب الصورة بنجاح!",
+        "data": {
+            "image": {
+                "id": 64,
+                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=consequuntur",
+                "position": "gallery",
+                "created_at": "2025-10-24 13:18:52",
+                "updated_at": "2025-10-24 13:18:52",
+                "product": {
+                    "id": 22,
+                    "name": "نعمان مظهر",
+                    "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:52",
+                    "images_count": 3
+                }
+            }
+        }
+    },
+    // store
+    {
+        "message": "تم إنشاء الصور بنجاح!",
+        "data": {
+            "images": [
+                {
+                    "id": 16,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aabb?text=eligendi",
+                    "position": "gallery",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 17,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/006688?text=aut",
+                    "position": "after",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 18,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/004455?text=officia",
+                    "position": "gallery",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                },
+                {
+                    "id": 95,
+                    "image": "http://127.0.0.1:8000/storage/product_images/GmwBx1plvZijkhYcKsRQ7YKbSkDoUZbEU2Jy2Yoj.png",
+                    "position": "gallery",
+                    "created_at": "2025-10-25 19:35:09",
+                    "updated_at": "2025-10-25 19:35:09"
+                }
+            ]
+        }
+    },
+    // update
+    {
+        "message": "تم تحديث الصورة بنجاح!",
+        "data": {
+            "image": {
+                "id": 64,
+                "image": "http://127.0.0.1:8000/storage/http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=consequuntur",
+                "position": "gallery",
+                "created_at": "2025-10-24 13:18:52",
+                "updated_at": "2025-10-25 19:35:34",
+                "product": {
+                    "id": 22,
+                    "name": "نعمان مظهر",
+                    "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-25 19:35:34",
+                    "images_count": 3,
+                    "category": {
+                        "id": 4,
+                        "name": "نعمه عبد الباسط",
+                        "created_at": "2025-10-24 13:18:51",
+                        "updated_at": "2025-10-24 13:18:51",
+                        "products_count": 7
+                    },
+                    "images": [
+                        {
+                            "id": 64,
+                            "image": "http://127.0.0.1:8000/storage/http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003366?text=consequuntur",
+                            "position": "gallery",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-25 19:35:34"
+                        },
+                        {
+                            "id": 65,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00cc22?text=sunt",
+                            "position": "gallery",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        },
+                        {
+                            "id": 66,
+                            "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/003399?text=doloremque",
+                            "position": "after",
+                            "created_at": "2025-10-24 13:18:52",
+                            "updated_at": "2025-10-24 13:18:52"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    // destroy
+    {
+        "message": "تم حذف الصورة بنجاح!",
+        "data": {
+            "image": {
+                "id": 20,
+                "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/00aa00?text=atque",
+                "position": "gallery",
+                "created_at": "2025-10-24 13:18:52",
+                "updated_at": "2025-10-24 13:18:52",
+                "product": {
+                    "id": 7,
+                    "name": "م. رجب عز العرب",
+                    "description": "ركنة: 4 فتيه و 1 كنبة و 1 ترابيزة",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-25 19:49:04",
+                    "images_count": 2
+                }
+            }
+        }
+    },
+    // destoryAll
+    {
+        "message": "تم حذف كل الصور بنجاح!",
+        "data": {
+            "images": [
+                {
+                    "id": 14,
+                    "image": "http://127.0.0.1:8000/storage/https://via.placeholder.com/640x480.png/0000dd?text=corporis",
+                    "position": "gallery",
+                    "created_at": "2025-10-24 13:18:51",
+                    "updated_at": "2025-10-24 13:18:51"
+                }
+            ]
+        }
+    }
+]

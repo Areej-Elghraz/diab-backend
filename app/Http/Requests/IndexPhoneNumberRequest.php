@@ -23,6 +23,7 @@ class IndexPhoneNumberRequest extends FormRequest
     {
         return [
             'type' => $this->includeRule(PhoneNumberTypeEnum::values()),
+            'primary' => 'sometimes|boolean',
         ];
     }
 }

@@ -72,6 +72,7 @@ test('user can reset password', function () {
         ['email' => $this->admin->email],
         [
             'token' => Hash::make($otp),
+            'verified' => true,
             'created_at' => now(),
         ]
     );

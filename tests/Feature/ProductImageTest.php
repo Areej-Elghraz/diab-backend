@@ -5,6 +5,8 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
 beforeEach(function () {
+    $this->category = \App\Models\Category::factory()->create();
+    $this->product = \App\Models\Product::factory()->create(['category_id' => $this->category->id]);
     $this->data = [
         'images' => [
             UploadedFile::fake()->image('before.jpg'),

@@ -19,7 +19,7 @@ abstract class TestCase extends BaseTestCase
         $this->admin    = User::factory()->create([
             'name'              => 'Admin',
             'username'          => 'ayadiab123',
-            'email'             => 'areejelghrazzz@gmail.com',
+            'email'             => 'diabfurnitures@gmail.com',
             'email_verified_at' => now(),
             'password'          => Hash::make('ayadiab'),
             'role'              => 'admin',
@@ -44,20 +44,5 @@ abstract class TestCase extends BaseTestCase
         $this->accessToken   = $this->loginResponse->json('data.access_token');
         $this->rememberToken = $this->loginResponse->json('data.remember_token');
 
-        $models = [
-            ['Category', 'categories'],
-            ['Product', null, ['images', 'gallery', 'beforeImage', 'afterImage']],
-            ['ProductImage'],
-            ['SocialLink'],
-            ['Banner'],
-            ['PhoneNumber'],
-        ];
-        foreach ($models as $model) {
-            $modelVars = lcfirst($model[1] ?? $model[0] . 's');
-            $modelVar = lcfirst($model[0]);
-            $modelClass = "App\\Models\\{$model[0]}";
-            $this->$modelVars = $modelClass::factory()->count(3)->create();
-            $this->$modelVar  = $this->$modelVars->first()->load($model[2] ?? []);
-        }
     }
 }

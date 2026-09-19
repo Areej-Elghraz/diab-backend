@@ -72,7 +72,8 @@ class ProductController extends ApiController
 
             $product = Product::create(attributes: [
                 'name'        => $validated['name'],
-                'description' => $validated['description'],
+                'description' => $validated['description'] ?? null,
+                'price'       => $validated['price'],
                 'category_id' => $validated['category_id'],
             ]);
 

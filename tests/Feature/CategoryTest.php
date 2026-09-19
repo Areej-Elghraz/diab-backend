@@ -1,6 +1,7 @@
 <?php
 
 beforeEach(function () {
+    $this->category = \App\Models\Category::factory()->create();
     $this->data = ['name' => fake()->unique()->name()];
 });
 
@@ -23,7 +24,7 @@ test('admin can view paginated categories list', function () {
 });
 
 test('normal user can view all categories (no pagination)', function () {
-    $response = $this->getJson('/api/categories?per_page=2');
+    $response = $this->getJson('/api/categories');
 
     $response->assertOk()
         ->assertJsonStructure([

@@ -38,7 +38,7 @@ class VerifyOtpController extends ApiController
                 $createdAt    = \Carbon\Carbon::parse($otpRecord->created_at);
                 $minutesSince = $createdAt->diffInMinutes(now());
                 if ($minutesSince >= $expiration) {
-                    throw ValidationException::withMessages(['otp' => __('messages.already_otp_resent')]);
+                    throw ValidationException::withMessages(['otp' => __('messages.otp_expired')]);
                 }
                 if (!Hash::check($validated['otp'], $otpRecord->token)) {
                     throw ValidationException::withMessages(['otp' => __('validation.invalid_value', ['attribute' => __('validation.attributes.otp')])]);

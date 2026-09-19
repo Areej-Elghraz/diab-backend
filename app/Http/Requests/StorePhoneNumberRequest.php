@@ -24,6 +24,7 @@ class StorePhoneNumberRequest extends FormRequest
             'phone'  => 'required|unique:phone_numbers,phone|phone:AUTO',
             'type'   => 'required_with:phone|array|min:1',
             'type.*' => ['required', new Enum(PhoneNumberTypeEnum::class)],
+            'primary' => 'sometimes|boolean',
         ];
     }
 

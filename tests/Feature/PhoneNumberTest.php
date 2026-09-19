@@ -3,6 +3,7 @@
 use App\Enums\PhoneNumberTypeEnum;
 
 beforeEach(function () {
+    $this->phoneNumber = \App\Models\PhoneNumber::factory()->create();
     $this->data = [
         'phone' => '+201012345678',
         'type' => fake()->randomElements(PhoneNumberTypeEnum::values(), rand(1, 2)),
@@ -49,7 +50,7 @@ test('cannot create phone number with duplicate number', function () {
 
 
 test('user can view specific phone number', function () {
-    $response = $this->getJson("/api/phone-numbers/{$this->socialLink->id}");
+    $response = $this->getJson("/api/phone-numbers/{$this->phoneNumber->id}");
 
     $response->assertOk()
         ->assertJsonStructure([
@@ -64,9 +65,7 @@ test('user can view specific phone number', function () {
 test('admin can update phone number', function () {
     $response = $this->withHeaders([
         'Authorization' => 'Bearer ' . $this->accessToken,
-    ])->putJson("/api/phone-numbers/{$this->socialLink->id}", [
-        'name' => 'Updated Social Link'
-    ]);
+    ])->putJson("/api/phone-numbers/{$this->phoneNumber->id}", $this->data);
 
     $response->assertOk()
         ->assertJsonStructure([
@@ -81,7 +80,7 @@ test('admin can update phone number', function () {
 test('admin can delete a phone number', function () {
     $response = $this->withHeaders([
         'Authorization' => 'Bearer ' . $this->accessToken,
-    ])->deleteJson("/api/phone-numbers/{$this->socialLink->id}");
+    ])->deleteJson("/api/phone-numbers/{$this->phoneNumber->id}");
 
     $response->assertOk()
         ->assertJsonStructure([

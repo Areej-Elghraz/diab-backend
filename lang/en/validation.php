@@ -202,6 +202,7 @@ return [
 
     'attributes' => [
         'name' => 'Name',
+        'input' => 'Username or Email',
         'username' => 'Username',
         'email' => 'Email',
         'password' => 'Password',
@@ -232,6 +233,4 @@ return [
         'all_devices' => 'Logout from all devices',
         'include' => 'Relations',
     ],
-
-
 ];

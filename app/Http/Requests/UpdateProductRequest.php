@@ -24,6 +24,7 @@ class UpdateProductRequest extends FormRequest
         return [
             'name'        => 'sometimes|nullable|string|max:100',
             'description' => 'sometimes|nullable|string',
+            'price'       => 'sometimes|numeric|min:0',
             'category_id' => 'sometimes|nullable|exists:categories,id',
             'include'     => $this->includeRule(ProductRelationEnum::values()),
         ];

@@ -18,6 +18,7 @@ class Product extends Model
     protected $fillable = [
         'name',
         'description',
+        'price',
         'category_id',
     ];
 
@@ -29,6 +30,13 @@ class Product extends Model
     protected $appends = [
         'images_count',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'price' => 'decimal:2',
+        ];
+    }
 
     public function category(): BelongsTo
     {

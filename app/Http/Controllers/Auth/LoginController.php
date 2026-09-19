@@ -46,7 +46,9 @@ class LoginController extends ApiController
             return [
                 'user' => $user->refresh(),
                 'access_token' => $tokens['access_token'],
+                'access_token_expires_in' => $tokens['access_token_expires_in'],
                 'remember_token' => $tokens['remember_token'],
+                'remember_token_expires_in' => $tokens['remember_token_expires_in'],
             ];
         },  successMessage: __('messages.login_success'));
     }

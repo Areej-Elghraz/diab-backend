@@ -19,20 +19,25 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'              => 'Admin',
             'username'          => 'ayadiab123',
-            'email'             => 'areejelghrazzz@gmail.com',
+            'email'             => 'diabfurnitures@gmail.com',
             'email_verified_at' => now(),
             'password'          => Hash::make('ayadiab'), // default password
             'role'              => 'admin',
         ]);
 
-        Category::factory(10)->create();
-        Banner::factory(7)->create();
-        Product::factory(30)->create()->each(function ($product) {
-            ProductImage::factory(3)->create([
-                'product_id' => $product->id,
-            ]);
-        });
-        PhoneNumber::factory(15)->create();
-        SocialLink::factory(5)->create();
+        // Only run fake seeders if the environment is local
+        if (app()->environment('local')) {
+            Category::factory(10)->create();
+            Banner::factory(7)->create();
+            Product::factory(30)->create()->each(function ($product) {
+                ProductImage::factory(3)->create([
+                    'product_id' => $product->id,
+                ]);
+            });
+            PhoneNumber::factory(15)->create();
+            SocialLink::factory(5)->create();
+        } else {
+            $this->command->info('Production environment detected. Fake data was not seeded.');
+        }
     }
 }
